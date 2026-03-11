@@ -58,7 +58,7 @@ const Dashboard = () => {
             <Activity size={20} className="text-blue-400" />
             Live Flood Risk Map
           </h2>
-          <div className="flex-grow rounded-lg overflow-hidden min-h-[400px]">
+          <div className="grow rounded-lg overflow-hidden min-h-100">
             <MapContainer center={mapCenter} zoom={13} style={{ height: '100%', width: '100%' }}>
               <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" />
               
@@ -92,7 +92,7 @@ const Dashboard = () => {
           </div>
 
           {/* Sensor Trends Chart */}
-          <div className="bg-slate-800 rounded-xl border border-slate-700 p-4 shadow-lg flex-grow">
+          <div className="bg-slate-800 rounded-xl border border-slate-700 p-4 shadow-lg grow">
             <h2 className="text-lg font-semibold mb-4 text-slate-200">Sensor Trends (Last Hour)</h2>
             <div className="h-48 w-full">
               <ResponsiveContainer width="100%" height="100%">
