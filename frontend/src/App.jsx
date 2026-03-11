@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // Import your pages
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
+import CitizenDashboard from "./pages/CitizenDashboard";
 
 function App() {
   return (
@@ -18,12 +19,7 @@ function App() {
         {/* We can point the Citizen portal to a placeholder for now, or you can build a simpler version later */}
         <Route
           path="/citizen"
-          element={
-            <div className="min-h-screen bg-slate-900 text-white flex justify-center items-center text-3xl">
-              Citizen Dashboard Coming Soon...
-            </div>
-          }
-        />
+          element={<CitizenDashboard />} />
       </Routes>
     </Router>
   );
