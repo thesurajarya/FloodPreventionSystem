@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, Circle } from 'react-leaflet';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { AlertTriangle, Droplets, CloudRain, Activity, Camera, CheckCircle, Radio, Play } from 'lucide-react';
 import 'leaflet/dist/leaflet.css';
+import Header from '/Users/TANISHK TIWARI/Desktop/Tanishk/Git/indiainno/FloodPreventionSystem/frontend/src/components/Header'; // Adjust the path if necessary
 
 const initialSensorData = [
   { time: '10:00', waterLevel: 20, rainIntensity: 5 },
@@ -82,6 +83,7 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-slate-900 text-slate-100 p-6 font-sans">
+    <Header activeAlerts={activeAlerts} systemStatus={isDemoMode ? 'operational' : 'degraded'} />
       
       {/* HEADER & CONTROLS */}
       <header className="flex justify-between items-center mb-8">
