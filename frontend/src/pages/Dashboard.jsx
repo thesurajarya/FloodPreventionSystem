@@ -135,7 +135,7 @@ const Dashboard = () => {
               Live Flood Risk Map
             </h2>
           </div>
-          <div className="grow rounded-lg overflow-hidden min-h-[400px]">
+          <div className="grow rounded-lg overflow-hidden min-h-100">
             <MapContainer center={mapCenter} zoom={13} style={{ height: '100%', width: '100%' }}>
               <TileLayer url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png" />
               <Marker position={[28.6139, 77.2090]}>
