@@ -1,16 +1,15 @@
-const express = require("express");
-const http = require("http");
-const { Server } = require("socket.io");
+const express = require('express');
+const { startBroker } = require('./mqtt/broker'); // Import the broker
 
 const app = express();
-const server = http.createServer(app);
+const PORT = 5000; // Your Express API port
 
-const io = new Server(server, {
-    cors: {
-        origin: "*"
-    }
+app.use(express.json());
+
+// Start the Express server
+app.listen(PORT, () => {
+  console.log(`API Server running on http://localhost:${PORT}`);
 });
 
-server.listen(3000, () => {
-    console.log("Server running on port 3000");
-});
+// Start the MQTT Broker simultaneously
+startBroker();
